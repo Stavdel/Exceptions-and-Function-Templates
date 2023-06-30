@@ -8,13 +8,13 @@ T Discriminant(T a, T b, T c)
     // Finds the value of the discriminant.
     T value = b * b - 4 * a * c;
 
-    // If discriminant value is positve or zero return value.
-    if (value >= 0)
-    return value;
-
-    // If discriminant value is negative throw exception.
-    else if (value < 0)
+    // If discriminant value is negative throw an exception.
+    if (value < 0)
         throw std::runtime_error("Discriminant(a, b, c): Negative Discriminant Encountered");
+
+
+    // Return value since it's not negative.
+    return value;
 }
 
 
